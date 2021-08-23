@@ -1,31 +1,43 @@
-import java.text.DecimalFormat;
+import com.sun.security.jgss.GSSUtil;
 
-public class Concecionaria extends vehiculo {
-    private static DecimalFormat df2= new DecimalFormat("#.###");
-    public static void main(String[] Args) {
+import java.util.ArrayList;
+import java.util.*;
 
-        Concecionaria p206 = new Concecionaria(); p206.marca = "Peugeot"; p206.modelo = "206";   p206.puertas = 4;          p206.precio = 200000.00;
-        Concecionaria p208 =new Concecionaria();  p208.marca="Peugeot";   p208.modelo="208";     p208.puertas= 5;           p208.precio=250000.00;
-        Concecionaria hTitan =new Concecionaria();hTitan.marca="Honda";   hTitan.modelo="Titan"; hTitan.cilindrada="125cc"; hTitan.precio=60000.00;
-        Concecionaria yYbr =new Concecionaria();  yYbr.marca="Yamaha";    yYbr.modelo="YBR";     yYbr.cilindrada="160cc";   yYbr.precio=80500.50;
+public class Concecionaria {
 
-        System.out.println("Marca: "+p206.marca+" //"+" Modelo: "+p206.modelo+" //"+" Puertas: "+p206.puertas+" //"+" Precio: $"+p206.precio+"0");
-        System.out.println("Marca: "+p208.marca+" //"+" Modelo: "+p208.modelo+" //"+" Puertas: "+p208.puertas+" //"+" Precio: $"+p208.precio+"0");
-        System.out.println("Marca: "+hTitan.marca+" //"+" Modelo: "+hTitan.modelo+" //"+" Cilindrada: "+hTitan.cilindrada+" //"+" Precio: $"+hTitan.precio+"0");
-        System.out.println("Marca: "+yYbr.marca+" //"+" Modelo: "+yYbr.modelo+" //"+" Cilindrada: "+yYbr.cilindrada+" //"+" Precio: $"+yYbr.precio+"0");
-        System.out.println("=====================================");
-        System.out.println("Vehiculo mas caro: "+p208.marca+" "+p208.modelo);
-        System.out.println("Vehiculo mas barato: "+hTitan.marca+" "+hTitan.modelo);
-        System.out.println("Vehiculo que contiene en el modelo la letra 'Y: "+yYbr.marca+" "+ yYbr.modelo);
-        System.out.println("=====================================");
-        System.out.println("vehiculos ordenados por precio de mayor a menor: ");
-        System.out.println(p208.marca + " "+ p206.modelo);
-        System.out.println(p206.marca + " "+ p208.modelo);
-        System.out.println(yYbr.marca + " "+ yYbr.modelo);
-        System.out.println(hTitan.marca + " "+ hTitan.modelo);
-
+    public static void main (String[]Args){
+            List<Object> vehiculos = new ArrayList<>();
+            vehiculos.add(new VhAuto("Peugeot", "206", 200000.000, 4));
+            vehiculos.add(new VhAuto("Peugeot", "208", 250000.000, 5));
+            vehiculos.add(new VhMoto("Honda", "Titan", 60000.00, 125));
+            vehiculos.add(new VhMoto("Yamaha", "YBR", 80500.000, 160));
+            
+for(int i=0; i< vehiculos.size();i++){
+    System.out.println(vehiculos.get(i));
+}
 
         }
-
-
     }
+
+
+
+
+
+
+
+    /*
+        System.out.println("Marca: "+ +" //"+" Modelo: "+p206.getModelo()+" //"+" Puertas: "+p206.getPuertas()+" //"+" Precio: $"+p206.getPrecio()+"0");
+        System.out.println("Marca: "+p208.getMarca()+" //"+" Modelo: "+p208.getModelo()+" //"+" Puertas: "+p208.getPuertas()+" //"+" Precio: $"+p208.getPrecio()+"0");
+        System.out.println("Marca: "+hTitan.getMarca()+" //"+" Modelo: "+hTitan.getModelo()+" //"+" Cilindrada: "+hTitan.getCilindrada()+"cc"+" //"+" Precio: $"+hTitan.getPrecio()+"0");
+        System.out.println("Marca: "+yYbr.getMarca()+" //"+" Modelo: "+yYbr.getModelo()+" //"+" Cilindrada: "+yYbr.getCilindrada()+"cc"+" //"+" Precio: $"+yYbr.getPrecio()+"0");
+        System.out.println("=====================================");
+        System.out.println("Vehiculo mas caro: "+p208.getModelo()+" "+p208.getModelo());
+        System.out.println("Vehiculo mas barato: "+hTitan.getMarca()+" "+hTitan.getModelo());
+        System.out.println("Vehiculo que contiene en el modelo la letra 'Y: "+yYbr.getMarca()+" "+ yYbr.getModelo());
+        System.out.println("=====================================");
+        System.out.println("vehiculos ordenados por precio de mayor a menor: ");
+        System.out.println(p208.getMarca() + " "+ p206.getModelo());
+        System.out.println(p206.getMarca() + " "+ p208.getModelo());
+        System.out.println(yYbr.getMarca() + " "+ yYbr.getModelo());
+        System.out.println(hTitan.getMarca() + " "+ hTitan.getModelo());
+  */
