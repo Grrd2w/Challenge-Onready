@@ -1,6 +1,7 @@
 public class Vehiculo  {
     private String marca;
     private String modelo;
+    private double precio;
 
     public String getMarca() {
         return marca;
@@ -26,7 +27,6 @@ public class Vehiculo  {
         this.precio = precio;
     }
 
-    private double precio;
        public Vehiculo(String marca, String modelo, double precio) {
         this.marca = marca;
         this.modelo = modelo;
