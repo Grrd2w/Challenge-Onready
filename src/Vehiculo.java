@@ -1,18 +1,18 @@
-public class Vehiculo  {
+public class Vehiculo extends Concecionaria  {
     private String marca;
     private String modelo;
     private double precio;
 
 
-       public Vehiculo(String marca, String modelo, double precio) {
+    public Vehiculo(String marca, String modelo, double precio) {
         this.marca = marca;
         this.modelo = modelo;
         this.precio = precio;
 
+       }
+
+    public Vehiculo() {
     }
-
-
-
 
 
     public String getMarca() {return marca;}
@@ -23,4 +23,8 @@ public class Vehiculo  {
 
     public double getPrecio() {return precio;}
     public void setPrecio(double precio) {this.precio = precio;}
+    @Override
+    public String toString() {
+        return "Marca: "+getMarca()+" // "+"Modelo: "+getModelo()+" // "+"Precio"+getPrecio();
+    }
 }
