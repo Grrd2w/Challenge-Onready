@@ -6,6 +6,7 @@ public class Concecionaria  {
         VhAuto p208 =new VhAuto("Peugeot","206",250000.00,5);
         VhMoto hTitan =new VhMoto("Honda","Titan",60000.00,"125cc");
         VhMoto yYbr =new VhMoto("Yamaha","YBR",80500.00,"160cc");
+
         System.out.println("Marca: "+p206.getMarca()+" //"+" Modelo: "+p206.getModelo()+" //"+" Puertas: "+p206.getPuertas()+" //"+" Precio: $"+p206.getPrecio()+"0");
         System.out.println("Marca: "+p208.getMarca()+" //"+" Modelo: "+p208.getModelo()+" //"+" Puertas: "+p208.getPuertas()+" //"+" Precio: $"+p208.getPrecio()+"0");
         System.out.println("Marca: "+hTitan.getMarca()+" //"+" Modelo: "+hTitan.getModelo()+" //"+" Cilindrada: "+hTitan.getCilindrada()+" //"+" Precio: $"+hTitan.getPrecio()+"0");
@@ -23,6 +24,4 @@ public class Concecionaria  {
 
 
         }
-
-
     }
